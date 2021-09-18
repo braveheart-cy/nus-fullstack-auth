@@ -10,7 +10,10 @@ var flash = require('connect-flash');
 var userInViews = require('./lib/middleware/userInViews');
 var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var albumRouter = require('./routes/album');
+//var cons = require('consolidate');
+const e = require('connect-flash');
+var engines = require('consolidate');
 
 dotenv.config();
 
@@ -45,8 +48,17 @@ passport.deserializeUser(function (user, done) {
 const app = express();
 
 // View engine setup
+// app.set('view engine', 'pug'); 
+
+app.engine('html',require('ejs').renderFile); //Can be removed
+// app.engine('pug', engines.pug)
+// app.set('view engine', 'html'); //Can be removed
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+
+
+// Set view engine as EJS
+// app.engine('html', require('ejs').renderFile);// Returned Error.
+// app.set('view engine', 'html'); //Can be removed
 
 app.use(logger('dev'));
 app.use(cookieParser());
@@ -94,7 +106,9 @@ app.use(function (req, res, next) {
 app.use(userInViews());
 app.use('/', authRouter);
 app.use('/', indexRouter);
-app.use('/', usersRouter);
+app.use('/', albumRouter);
+
+app.use(express.static(path.join(__dirname,'assets')));
 
 // Catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -110,7 +124,7 @@ app.use(function (req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render('error.pug', {
       message: err.message,
       error: err
     });
@@ -121,7 +135,7 @@ if (app.get('env') === 'development') {
 // No stacktraces leaked to user
 app.use(function (err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
+  res.render('error.pug', {
     message: err.message,
     error: {}
   });
