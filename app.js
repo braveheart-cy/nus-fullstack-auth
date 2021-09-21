@@ -11,6 +11,9 @@ var userInViews = require('./lib/middleware/userInViews');
 var authRouter = require('./routes/auth');
 var indexRouter = require('./routes/index');
 var albumRouter = require('./routes/album');
+var loggedRouter = require('./routes/logged');
+
+
 //var cons = require('consolidate');
 const e = require('connect-flash');
 var engines = require('consolidate');
@@ -106,7 +109,7 @@ app.use(function (req, res, next) {
 app.use(userInViews());
 app.use('/', authRouter);
 app.use('/', indexRouter);
-app.use('/', albumRouter);
+app.use('/', loggedRouter);
 
 app.use(express.static(path.join(__dirname,'assets')));
 
