@@ -13,10 +13,10 @@ The approaches of this application include:
 
 
 For this simple full-stack development, we separate the repositories into:
-~/Public to store the static files  
-~/lib/middleware to keep the middleware
-~/routes for the router
-~/view for all the HTML
+- ~/Public to store the static files  
+- ~/lib/middleware to keep the middleware
+- ~/routes for the router
+- ~/view for all the HTML
 
 
 The Client-Server architecture shall includes:
@@ -69,7 +69,7 @@ Express is a framework based on Node.js used for building web applcation
 
 The concept of the development of NUS Money is illustrated as below:
 
-<div align=center><img src="public/images/concept.png"></div>
+<div align=center><img src="public/images/concept.png" width="500" height="500"></div>
 
 #### Step 1 
 1. In general, the static files (html, css, ps) are stored at the server side.
@@ -92,5 +92,5 @@ The concept of the development of NUS Money is illustrated as below:
 1. In some cases we may not need the dbapi to handle the simple application. However, we're not sure whether there is adapter in the node.js to the SQL. Otherwise, we can keep the database at the same layer / container. 
 
 Reference:
-[Why The Hell Would I Use Node.js?](https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
-[Auth0 Quick Start](https://auth0.com/docs/quickstart/webapp/nodejs?download=true)
+- [Why The Hell Would I Use Node.js?](https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
+- [Auth0 Quick Start](https://auth0.com/docs/quickstart/webapp/nodejs?download=true)
