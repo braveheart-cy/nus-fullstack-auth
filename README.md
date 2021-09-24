@@ -93,3 +93,4 @@ The concept of the development of NUS Money is illustrated as below:
 
 Reference:
 [Why The Hell Would I Use Node.js?](https://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js)
+[Auth0 Quick Start](https://auth0.com/docs/quickstart/webapp/nodejs?download=true)
