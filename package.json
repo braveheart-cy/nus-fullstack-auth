@@ -1,25 +1,50 @@
 {
-  "name": "auth0-nodejs-webapp-sample-new-test",
-  "version": "0.0.0",
-  "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "name": "Expat-app",
+  "version": "1.0.0",
+  "description": "This project contains the details of how we create the NUS Money App.\r For this simple full-stack development, we separate the repositories into ~/FrontEnd & ~/BackEnd instead of making them into two different projects to better manage the source code.",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
   },
   "dependencies": {
-    "bootstrap": "^5.1.1",
+    "@auth0/auth0-spa-js": "^1.17.1",
+    "body-parser": "^1.19.0",
     "connect-flash": "^0.1.1",
     "consolidate": "^0.16.0",
     "cookie-parser": "^1.4.5",
-    "debug": "~4.3.2",
+    "cors": "^2.8.5",
+    "cross-fetch": "^3.1.4",
     "dotenv": "^10.0.0",
     "ejs": "^3.1.6",
-    "express": "~4.17.1",
+    "express": "^4.17.1",
     "express-session": "^1.17.2",
-    "http-errors": "~1.8.0",
-    "morgan": "~1.10.0",
+    "fetch": "^1.1.0",
+    "follow-redirects": "^1.14.4",
+    "jade": "^1.11.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.6.2",
     "passport": "^0.4.1",
     "passport-auth0": "^1.4.0",
     "pug": "^3.0.2",
-    "swig": "^1.4.2"
-  }
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Geofflac/Expat-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Geofflac/Expat-app/issues"
+  },
+  "homepage": "https://github.com/Geofflac/Expat-app#readme"
 }

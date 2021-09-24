@@ -4,14 +4,11 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-        <link href="/stylesheets/index.css" rel="stylesheet">        
-        <!-- if need cool logo https://fontawesome.com/ <script src="https://kit.fontawesome.com/ca8a1988f6.js" crossorigin="anonymous"></script> -->
+        <link href="/stylesheets/index.css" rel="stylesheet">                
         
-        
-        <title>Expat$ Product</title>
+        <title>Expat$</title>
     </head>
     <body>
-        <script src="/js/product.js"></script>
         <div class="text-center">
             <img
                 class="mb-4"
@@ -39,25 +36,22 @@
                     <li><a href="/about" class="nav-link px-2 link-dark">About</a></li>
                 </ul>
                 <div class="col-md-3 text-end">
-                   
                     <button type="button" class="btn btn-primary" id="btn-logout" onclick="window.location.href='/logout'">Log out</button>
+              
                 </div>
             </header>
         </div>
         <!-- End of the header -->
 
         <!-- Main content here -->
-
-        <p class="text-center fs-2 fw-bold">Product comparison</p>
-        <div class="text-center">
-        <button type="button" class="btn btn-primary">Saving account</button>
-        <button type="button" class="btn btn-primary" onclick="deposit()">Deposit account</button>
-        <button type="button" class="btn btn-primary">Credit card</button>
-    </div>
-
-    <div class="text-center" id="prod_result"></div>
-    <p id="test"></p>
-
+        <p class="product_title text-center fs-4 fw-bold" >Bank</p>
+        <p id="api_bank" class="text-center"></p>
+        <p class="product_title text-center fs-4 fw-bold" >Type of account</p>
+        <p id="api_type" class="text-center"></p>
+        <p class="product_title text-center fs-4 fw-bold" >Product</p>
+        <p id="api_product" class="text-center"></p>
+        <p class="product_title text-center fs-4 fw-bold" >Benefits</p>
+        <p id="api_benefit"></p>
         <!-- End of main content -->
 
         <!-- This is the footer -->
@@ -111,7 +105,7 @@
             </footer>
         </div>
         <!-- End of the footer -->
-        <script src="/js/product.js"></script>
+        <script src="/js/deposit_ocbc.js"></script>
         
         <!-- Auth0  -->
         <!-- <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
